@@ -112,13 +112,8 @@
         }
       }
 
-<<<<<<< HEAD
-      &.prominent {
-        background-color: darken($green, 5%);
-=======
       &.featured {
         background-color: darken($highlight, 5%);
->>>>>>> upstream/master
         color: $black;
 
         transform: scale(1.06);
