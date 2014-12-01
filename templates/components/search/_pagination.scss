@@ -1,0 +1,40 @@
+.uomcontent {
+  p.search-result-numbers {
+    @include adjust-font-size-to(14px);
+    @include padding-leader(1);
+    border-top: 1px solid rgba(#000000, 0.1);
+    color: $midgray;
+  }
+  ul.search-pagination {
+    @include padding-leader(1);
+    @include padding-trailer(1);
+    padding-left: 0;
+    padding-right: 0;
+    text-align: left;
+
+    li {
+      display: inline-block;
+      list-style-type: none;
+      margin: 0;
+      max-width: auto;
+      padding: 0;
+      width: auto;
+    }
+
+    a,
+    span {
+      @include rem(border-radius, 2px);
+      @include rem(font-size, 16px);
+      @include rem(padding, 5px 15px);
+      display: block;
+
+      &.button-small {
+        @include rem(font-size, 12px);
+      }
+    }
+
+    span {
+      background-color: $paleblue;
+    }
+  }
+}

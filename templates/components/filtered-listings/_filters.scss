@@ -69,15 +69,26 @@
       width: 75%;
     }
 
-    input[type="checkbox"] + label {
+    input[type="checkbox"] + label,
+    input[type="checkbox"] + label span {
+      display: inline-block;
+      width: auto;
+    }
+
+    input[type="checkbox"] + label::after {
+      top: 9px;
+    }
+
+    input[type="checkbox"] + label span::before {
       margin-left: 0;
+      top: 5px;
     }
 
     .undergraduate,
-    .category-one {
+    .category-a {
       color: lighten($green, 30%);
 
-      input[type="checkbox"] + label {
+      input[type="checkbox"] + label span::before {
         background-color: lighten($green, 30%);
         border-color: darken($green, 10%);
 
@@ -88,10 +99,11 @@
     }
 
     .certificates_diplomas,
-    .category-two {
+    .n_award,
+    .category-b {
       color: $bronze;
 
-      input[type="checkbox"] + label {
+      input[type="checkbox"] + label span::before {
         background-color: $bronze;
         border-color: darken($bronze, 20%);
 
@@ -102,11 +114,11 @@
     }
 
     .coursework,
-    .category-three {
+    .category-c {
       color: $lightestblue;
 
-      input[type="checkbox"] + label {
-        background-color: l$lightestblue;
+      input[type="checkbox"] + label span::before {
+        background-color: lighten($lightestblue, 10%);
         border-color: darken($lightestblue, 20%);
 
         &::after {
@@ -116,15 +128,29 @@
     }
 
     .phd,
-    .category-four {
+    .category-d {
       color: lighten($lightblue, 10%);
 
-      input[type="checkbox"] + label {
+      input[type="checkbox"] + label span::before {
         background-color: lighten($lightblue, 10%);
         border-color: darken($lightblue, 10%);
 
         &::after {
           border-color: darken($lightblue, 20%);
+        }
+      }
+    }
+
+    .research,
+    .category-e {
+      color: $paleyellow;
+
+      input[type="checkbox"] + label span::before {
+        background-color: lighten($paleyellow, 10%);
+        border-color: darken($paleyellow, 20%);
+
+        &::after {
+          border-color: darken($paleyellow, 30%);
         }
       }
     }
