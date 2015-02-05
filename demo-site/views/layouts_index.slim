@@ -7,27 +7,27 @@ div role="main"
       .filtered-listing-wrapper
         form.filtered-listing-select
           fieldset.left
-            strong Filter by type
+            legend Filter by type
             div.all
               input.checkbox type="checkbox" name="f[degree_type]" checked="checked" data-tag="all" id="c00"
-              label for="c00"
+              label for="c00" tabindex="0"
                 span All
             div.category-a
               input#c1.checkbox type="checkbox" name="f[course_type]" data-tag="category-a"
-              label for="c1"
+              label for="c1" tabindex="0"
                 span Lists
             div.category-b
               input#c2.checkbox type="checkbox" name="f[course_type]" data-tag="category-b"
-              label for="c2"
+              label for="c2" tabindex="0"
                 span Single view
             div.category-c
               input#c3.checkbox type="checkbox" name="f[course_type]" data-tag="category-c"
-              label for="c3"
+              label for="c3" tabindex="0"
                 span Mixed views
-          fieldset.right
-            strong Filter by category
+          .right
+            label for="f-select2" Filter by category
             div
-              select.clear name="f[select2]" title="Please make a selection from the 2nd dropdown"
+              select#f-select2.clear name="f[select2]" title="Please make a selection from the 2nd dropdown"
                 option value="-1" All categories
                 option value="websitesections" Website sections
                 option value="news" News
@@ -48,7 +48,12 @@ div role="main"
           a href="/layouts/homepage"
             |Website section
             '
-            strong Homepage
+            strong Homepage (dark background)
+        li class="category-c item"
+          a href="/layouts/floating-contrast"
+            |Website section
+            '
+            strong Homepage (light background)
         li class="category-c item"
           a href="/layouts/about"
             |Website section
